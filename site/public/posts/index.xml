@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Posts on Не бойся</title>
+        <link>http://localhost:1313/posts/</link>
+        <description>Recent content in Posts on Не бойся</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>ru-RU</language>
+        <lastBuildDate>Tue, 01 Apr 2025 18:22:26 +0300</lastBuildDate><atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Пост 1</title>
+        <link>http://localhost:1313/posts/progress-update-1/</link>
+        <pubDate>Tue, 01 Apr 2025 18:22:26 +0300</pubDate>
+        
+        <guid>http://localhost:1313/posts/progress-update-1/</guid>
+        <description>&lt;img src="http://localhost:1313/images/gallery%20full%203.png" alt="Featured image of post Пост 1" /&gt;&lt;h1 id=&#34;прогресс-1&#34;&gt;Прогресс 1
+&lt;/h1&gt;</description>
+        </item>
+        
+    </channel>
+</rss>

@@ -1,0 +1,72 @@
+baseURL = "https://example.org/"
+languageCode = "ru-RU"
+title = "Не бойся"
+theme = "hugo-theme-stack"
+
+[taxonomies]
+  tag = "tags"
+
+[params]
+  mainSections = ["pages"]
+
+  [params.sidebar]
+    compact = false  # Отключает компактный вид боковой панели
+    emoji = "😄"    # Эмодзи над аватаркой
+    subtitle = "Проект по курсу 'Проектная деятельность'"
+
+    [params.sidebar.avatar]
+      enabled = true               # Включение аватарки
+      local = true                 # Использование локального изображения
+      src = "/avatar.png" 
+
+  # Настройка виджетов
+  [params.widgets]
+    [[params.widgets.page]]
+      type = "toc"  # Виджет содержания страницы
+
+    [[params.widgets.homepage]]
+      type = "tag-cloud"
+      [params.widgets.homepage.params]
+        limit = 10 
+  # Настройка подвала
+  [params.footer]
+    customText = "Политех."
+
+# Настройка меню
+[menu]
+  [[menu.main]]
+    name = "Главная"
+    url = "/"
+    weight = 1
+    [[menu.main.params]]
+      icon = "home"
+
+  [[menu.main]]
+    name = "О проекте"
+    url = "/pages/about/"
+    weight = 2
+    [[menu.main.params]]
+      icon = "link"
+
+  [[menu.main]]
+    name = "Участники"
+    url = "/pages/members/"
+    weight = 3
+    [[menu.main.params]]
+      icon = "user"
+
+  [[menu.main]]
+    name = "Журнал"
+    url = "/posts/"
+    weight = 4
+    [[menu.main.params]]
+      icon = "date"
+
+  [[menu.main]]
+    name = "Ресурсы"
+    url = "/pages/resources/"
+    weight = 5
+    [[menu.main.params]]
+      icon = "link"
+
+

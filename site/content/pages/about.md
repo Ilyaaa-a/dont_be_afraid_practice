@@ -4,7 +4,7 @@ draft = false
 title = 'О проекте'
 description = ''
 weight = 2
-tags = ["О проекте"]
+tags = ["О проекте", "Чета там"]
 +++
 
 # О проекте

@@ -29,5 +29,21 @@ tags = ["Ресурсы", "Ссылки"]
   website = "https://marketplace.visualstudio.com/items/?itemName=yzhang.markdown-all-in-one"
   image = "https://yzhang.gallerycdn.vsassets.io/extensions/yzhang/markdown-all-in-one/3.6.3/1741534224980/Microsoft.VisualStudio.Services.Icons.Default"
 
+[[links]]
+  title = "RenPy"
+  description = "Популярный, мощный и удобный движок для создания визуальных новелл."
+  website = "https://www.renpy.org/"
+  image = "https://www.renpy.org/static/index-logo.png"
+
+[[links]]
+  title = "Создание текстового редактора на Python с помощью Tkinter"
+  description = "Подробная статься с пошаговым объяснением."
+  website = "https://www.instructables.com/Create-a-Simple-Python-Text-Editor/"
+  image = "https://www.instructables.com/assets/img/instructables-logo-2023.svg"
+
 +++
+
+
+
+
 

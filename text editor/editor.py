@@ -1,7 +1,7 @@
 import sys
 import tkinter as tk
 from tkinter import filedialog
-from tkinter import Menu
+from tkinter import ttk 
 
 # Создаем главное окно
 root = tk.Tk()
@@ -29,22 +29,24 @@ save_button = tk.Button(root, text="Save", command=save_as)
 save_button.grid(row=1, column=0, sticky="ew")
 
 # Функции для изменения шрифта
-def set_font_helvetica():
-    global text
-    text.config(font=("Helvetica", 12))
+fonts = ["Helvetica", "Arial", "Courier", "Times New Roman", "Verdana", "Comic Sans MS"]
+selected_font = tk.StringVar(value=fonts[0])
 
 def set_font_courier():
     global text
     text.config(font=("Courier", 12))
 
-# Создаем меню для выбора шрифта
-font_menu = Menu(root, tearoff=0)
-font_menu.add_command(label="Helvetica", command=set_font_helvetica)
-font_menu.add_command(label="Courier", command=set_font_courier)
+def update_font():
+    text.config(font=(selected_font.get(), 12))
 
-# Кнопка для открытия меню шрифтов
-font_button = tk.Menubutton(root, text="Font", menu=font_menu)
-font_button.grid(row=2, column=0, sticky="ew")
+font_selector = ttk.Combobox(
+    root,
+    textvariable=selected_font,
+    values=fonts,
+    state='readonly'
+)
+font_selector.grid(row=2, column=0, sticky="ew")
+font_selector.bind("<<ComboboxSelected>>", lambda e: update_font())
 
 # Запуск главного цикла
 root.mainloop()

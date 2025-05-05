@@ -24,9 +24,9 @@ def save_as():
     global text
     content = text.get("1.0", "end-1c")
     file_location = filedialog.asksaveasfilename(
-        defaultextension=".md",  # ← Здесь поменял на .md
+        defaultextension=".md",
         filetypes=[
-            ("Markdown files", "*.md"),  # ← Приоритетный тип
+            ("Markdown files", "*.md"),
             ("Text files", "*.txt"),
             ("All files", "*.*")
         ]

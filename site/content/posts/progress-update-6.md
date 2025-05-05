@@ -68,32 +68,42 @@ root.mainloop()  # Запускаем главный цикл окна — пр�
 from tkinter import filedialog  # Импорт модуля для открытия и сохранения файлов
 
 def save_as():
-    # Получаем весь текст от первой строки до последнего символа (без последнего переноса строки)
+    global text
+    # Получаем текст из поля
     content = text.get("1.0", "end-1c")
     
-    # Открываем диалог сохранения файла
+    # Открываем окно сохранения с расширением .md по умолчанию
     file_location = filedialog.asksaveasfilename(
-        defaultextension=".txt",
-        filetypes=[("Text files", "*.txt"), ("All files", "*.*")]
+        defaultextension=".md",
+        filetypes=[
+            ("Markdown files", "*.md"),
+            ("Text files", "*.txt"),
+            ("All files", "*.*")
+        ]
     )
     
-    # Если пользователь выбрал место для сохранения
+    # Если путь выбран — записываем текст в файл
     if file_location:
-        # Сохраняем текст в выбранный файл
-        with open(file_location, "w") as file:
+        with open(file_location, "w", encoding="utf-8") as file:
             file.write(content)
 
 def open_as():
-    # Открываем диалог выбора файла
+    # Открываем диалог выбора файла (приоритет — .md)
     file_location = filedialog.askopenfilename(
-        filetypes=[("Markdown files", "*.md"), ("All files", "*.*")]
+        filetypes=[
+            ("Markdown files", "*.md"),
+            ("Text files", "*.txt"),
+            ("All files", "*.*")
+        ]
     )
+    
+    # Если файл выбран — читаем его и вставляем в текстовое поле
     if file_location:
-        # Читаем содержимое файла и вставляем его в текстовое поле
         with open(file_location, "r", encoding="utf-8") as file:
             content = file.read()
-            text.delete("1.0", "end")  # Очищаем текстовое поле
-            text.insert("1.0", content)  # Вставляем содержимое
+            text.delete("1.0", "end")
+            text.insert("1.0", content)
+            update_preview()  # Обновляем предпросмотр Markdown
 ```
 
 **Кнопки для вызова функций:**
@@ -260,15 +270,28 @@ root.grid_columnconfigure(1, weight=1)
 # Функция для сохранения текста в файл
 def save_as():
     global text
-    content = text.get("1.0", "end-1c")  # Получаем текст из текстового поля
-    file_location = filedialog.asksaveasfilename(defaultextension=".txt", filetypes=[("Text files", "*.txt"), ("All files", "*.*")])
-    if file_location:  # Если пользователь выбрал файл
-        with open(file_location, "w") as file:
+    content = text.get("1.0", "end-1c")
+    file_location = filedialog.asksaveasfilename(
+        defaultextension=".md",
+        filetypes=[
+            ("Markdown files", "*.md"),
+            ("Text files", "*.txt"),
+            ("All files", "*.*")
+        ]
+    )
+    if file_location:
+        with open(file_location, "w", encoding="utf-8") as file:
             file.write(content)
-
+            
 # Функция для открытия файла
 def open_as():
-    file_location = filedialog.askopenfilename(filetypes=[("Markdown files", "*.md"), ("All files", "*.*")])
+    file_location = filedialog.askopenfilename(
+        filetypes=[
+            ("Markdown files", "*.md"),
+            ("Text files", "*.txt"),
+            ("All files", "*.*")
+        ]
+    )
     if file_location:
         with open(file_location, "r", encoding="utf-8") as file:
             content = file.read()
@@ -341,6 +364,7 @@ header1_button = tk.Button(button_frame, text="H1", command=lambda: make_header(
 header2_button = tk.Button(button_frame, text="H2", command=lambda: make_header(2))
 header3_button = tk.Button(button_frame, text="H3", command=lambda: make_header(3))
 font_dropdown.grid(row=0, column=8, padx=2, pady=2)
+
 
 # Расположение кнопок
 open_button.grid(row=0, column=0, padx=2, pady=2)

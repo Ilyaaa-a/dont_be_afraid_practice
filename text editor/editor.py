@@ -23,7 +23,7 @@ root.grid_columnconfigure(1, weight=1)
 def save_as():
     global text
     content = text.get("1.0", "end-1c")  # Получаем текст из текстового поля
-    file_location = filedialog.asksaveasfilename(defaultextension=".txt", filetypes=[("Text files", "*.txt"), ("All files", "*.*")])
+    file_location = filedialog.asksaveasfilename(defaultextension=".md", filetypes=[("Markdown files", "*.md"), ("All files", "*.*")])
     if file_location:  # Если пользователь выбрал файл
         with open(file_location, "w") as file:
             file.write(content)

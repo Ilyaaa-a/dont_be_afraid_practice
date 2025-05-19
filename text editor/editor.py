@@ -27,10 +27,16 @@ def save_as():
     if file_location:  # Если пользователь выбрал файл
         with open(file_location, "w") as file:
             file.write(content)
-
+            
 # Функция для открытия файла
 def open_as():
-    file_location = filedialog.askopenfilename(filetypes=[("Markdown files", "*.md"), ("All files", "*.*")])
+    file_location = filedialog.askopenfilename(
+        filetypes=[
+            ("Markdown files", "*.md"),
+            ("Text files", "*.txt"),
+            ("All files", "*.*")
+        ]
+    )
     if file_location:
         with open(file_location, "r", encoding="utf-8") as file:
             content = file.read()
@@ -103,6 +109,7 @@ header1_button = tk.Button(button_frame, text="H1", command=lambda: make_header(
 header2_button = tk.Button(button_frame, text="H2", command=lambda: make_header(2))
 header3_button = tk.Button(button_frame, text="H3", command=lambda: make_header(3))
 font_dropdown.grid(row=0, column=8, padx=2, pady=2)
+
 
 # Расположение кнопок
 open_button.grid(row=0, column=0, padx=2, pady=2)

@@ -41,6 +41,18 @@ tags = ["Ресурсы", "Ссылки"]
   website = "https://www.instructables.com/Create-a-Simple-Python-Text-Editor/"
   image = "/images/instructables.png"
 
+  [[links]]
+  title = "Взаимодейтствие с организацией-партнёром"
+  description = "Посещение онлайн-конференции"
+  website = "https://rvision.ru/"
+  image = "/images/rvision.png"
+
+    [[links]]
+  title = "Московский Политехнический университет"
+  description = "Официальный сайт университета"
+  website = "https://mospolytech.ru/"
+  image = "/images/polit.png"
+
 +++
 
 

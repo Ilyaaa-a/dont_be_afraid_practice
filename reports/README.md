@@ -6,7 +6,10 @@
 ### Отчёт о взаимодействии с организацией-партнёром: https://github.com/Ilyaaa-a/dont_be_afraid_practice/blob/main/docs/partner_report.md    
 **Описание:** как мы посетили онлайн-конференцию, и как это помогло нам в проекте
 
-### Финанльный отчёт по второй части:     
+### Туториал по вариативной части (техническое руководство): https://github.com/Ilyaaa-a/dont_be_afraid_practice/blob/main/docs/tutorial.md          
+**Описание:** как создать текстовый редактор
+
+### Финанльный отчёт по второй части: https://github.com/Ilyaaa-a/dont_be_afraid_practice/blob/main/docs/final_report.md     
 **Описание:** как мы выполняли вариативную часть задания и создали текстовый редактор
 
 ## Общие отчеты:       

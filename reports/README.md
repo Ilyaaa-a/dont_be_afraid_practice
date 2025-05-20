@@ -1,6 +1,6 @@
 # Отчёты в бинарных форматах
 
-##№ Отчёт о взаимодействии с заказчиком: https://github.com/Ilyaaa-a/dont_be_afraid_practice/blob/main/docs/customer_report.md    
+### Отчёт о взаимодействии с заказчиком: https://github.com/Ilyaaa-a/dont_be_afraid_practice/blob/main/docs/customer_report.md    
 Описание: как мы взаимодействовали с заказчиком, и что полезного мы узнали из этого взаимодействия
 
 ### Отчёт о взаимодействии с организацией-партнёром: https://github.com/Ilyaaa-a/dont_be_afraid_practice/blob/main/docs/partner_report.md    

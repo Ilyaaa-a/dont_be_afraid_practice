@@ -4,7 +4,7 @@ draft = false
 title = 'Взаимодействе с организацией-партнёром'
 description = 'Онлайн-конференция с представителями компании R-Vision'
 image = '/images/rConf.png'
-tags = ["Анализ"]
+tags = ["Анализ", "Отчеты"]
 +++
 
 # Отчёт о видео-конференции R-EVOlution Conference с компанией R-Vision
